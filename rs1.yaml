@@ -1,7 +1,5 @@
 apiVersion: apps/v1
 kind: ReplicaSet
-labels:
-  app: myapp
 metadata:
   name: rs1
 spec:
@@ -28,8 +26,6 @@ spec:
 
 apiVersion: v1
 kind: Service
-labels:
-  app: myapp
 metadata:
   name: myservice
 spec:

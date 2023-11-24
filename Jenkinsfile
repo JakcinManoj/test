@@ -22,6 +22,12 @@ pipeline {
                 sh '/usr/bin/docker push jakejake23/q2'
             }
         }
+        #start minikube
+        stage ('start minikube') {
+            steps {
+                sh 'minikube start'
+            }
+        }
         stage ('kubernetes replica set t0 create 5 pods') {
             steps {
                 sh 'kubectl create -f rs1.yaml'

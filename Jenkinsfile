@@ -22,7 +22,6 @@ pipeline {
                 sh '/usr/bin/docker push jakejake23/q2'
             }
         }
-        #start minikube
         stage ('start minikube') {
             steps {
                 sh 'minikube start'

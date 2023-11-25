@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-                git branch: 'master', url: 'https://github.com/C2-80295/question2.git'
+                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/question2.git'
             }
         }
         stage ('docker login') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('docker push image') {
             steps {
-                sh '/usr/bin/docker push jakejake23/q1'
+                sh '/usr/bin/docker push jakejake23/q2'
             }
         }
         stage ('reload docker service') {

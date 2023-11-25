@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/jenkins.git'
+                git branch: 'master', url: 'https://github.com/C2-80295/question2.git'
             }
         }
         stage ('docker login') {

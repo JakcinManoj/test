@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/question2.git'
+                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/question2.git'
             }
         }
         stage ('docker login') {

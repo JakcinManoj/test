@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/Sample.git'
+                git branch: 'master', url: 'https://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@github.com/C2-80295/Sample.git'
             }
         }
 
@@ -24,9 +24,10 @@ pipeline {
                 sh '/usr/bin/docker push jakejake23/sample'
             }
         }
-        stage ('reload docker service') {
+        stage ('reload kubernetes service') {
             steps {
-                sh '/usr/bin/docker service update --image jakejake23/sample --force myservice'
+                sh 'kubectl delete -f /var/lib/jenkins/workspace/Sample/rs1.yaml'
+                sh 'kubectl apply -f /var/lib/jenkins/workspace/Sample/rs1.yaml'
             }
         }
     }

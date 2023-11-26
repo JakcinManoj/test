@@ -8,6 +8,7 @@ pipeline {
             }
         }
 
+
         
         stage ('docker login') {
             steps {

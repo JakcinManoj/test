@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-                git branch: 'master', url: 'https://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@github.com/C2-80295/Sample.git'
+                git branch: 'master', url: 'https://c2-80295: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@github.com/C2-80295/Sample.git'
             }
         }
 
